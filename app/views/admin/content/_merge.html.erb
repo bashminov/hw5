@@ -1,0 +1,12 @@
+<div class='left_form'>
+  <h4><%= _("Merge Articles") %></h4>
+  <%= form_tag(:controller=>'content', :action=>'merge', :id1=>@article.id, :method => 'post') do %>
+  <div class='clearfix'>
+    <%= label_tag('merge_with', "Article ID") %>
+    <div class='input'>
+      <%= text_field_tag('merge_with') %>
+    </div>
+  </div>
+    <%= submit_tag("Merge")  %>
+  <% end %>
+</div>
